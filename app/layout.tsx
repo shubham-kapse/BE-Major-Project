@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'MindfulCare',
   description: 'A Mental Health Well-Being App.',
   icons: {
-    icon: '/assets/images/logo.svg'
+    icon: '/assets/images/logo.png'
   }
 }
 

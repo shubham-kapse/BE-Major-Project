@@ -6,7 +6,7 @@ import { staggerContainer, fadeIn, planetVariants } from '@/utils/motion'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ThemeProvider } from './ThemeProvider'
+
 
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div variants={planetVariants('right')} className='flex-1 flex justify-center items-center' >
-          <Image src='/assets/images/hero.png' alt='hero' width={1000} height={1000} className='max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]'/>
+          <Image src='/assets/images/homeimg1.png' alt='hero' width={1000} height={1000} className='max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]'/>
         </motion.div>
 
       </motion.div>

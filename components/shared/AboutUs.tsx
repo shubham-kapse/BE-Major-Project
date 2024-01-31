@@ -13,7 +13,7 @@ const Hero = () => {
       <motion.div variants= {staggerContainer} initial='hidden' whileInView='show' viewport={{ once: 'false', amount: 0.25 }} className='wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0'>
 
       <motion.div variants={planetVariants('left')} className='flex-1 flex justify-center items-center' >
-          <Image src='/assets/images/hero.png' alt='hero' width={1000} height={1000} className='max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]'/>
+          <Image src='/assets/images/image-about-us.png' alt='hero' width={1000} height={1000} className='max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]'/>
         </motion.div>
 
 

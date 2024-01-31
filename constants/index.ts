@@ -1,3 +1,5 @@
+
+
 export const headerLinks = [
     {
         label: 'Home',
@@ -70,23 +72,62 @@ export const testLinks = [
     label: 'Youth Mental Health Test',
     route: '/youth-mental-health'
   }
+];
+
+export const nextLink = [
+    {
+      label: 'Next',
+      route: '/personal-info'
+    }
 ]
 
-export const socials = [
+// export const socials = [
+//     {
+//       name: 'twitter',
+//       url: '/twitter.svg',
+//     },
+//     {
+//       name: 'linkedin',
+//       url: '/linkedin.svg',
+//     },
+//     {
+//       name: 'instagram',
+//       url: '/instagram.svg',
+//     },
+//     {
+//       name: 'facebook',
+//       url: '/facebook.svg',
+//     },
+//   ];
+
+  export const FOOTER_LINKS = [
     {
-      name: 'twitter',
-      url: '/twitter.svg',
+      title: 'Services',
+      links: [
+        'Pyschotherapy',
+        'Mental Councelling',
+        'Support Group',
+      ],
     },
     {
-      name: 'linkedin',
-      url: '/linkedin.svg',
-    },
-    {
-      name: 'instagram',
-      url: '/instagram.svg',
-    },
-    {
-      name: 'facebook',
-      url: '/facebook.svg',
+      title: 'Useful Links',
+      links: ['Pricing', 'Privacy Policy', 'Terms Of Use', 'Help'],
     },
   ];
+
+  export const FOOTER_CONTACT_INFO = {
+    title: 'Contact Us',
+    links: [
+      { label: 'Admin Officer', value: '123-456-7890' },
+      { label: 'Email Officer', value: 'hilink@akinthil.com' },
+    ],
+  };
+
+  export const socials = {
+    title: 'Social',
+    links: [
+      '/assets/icons/facebook.svg',
+      '/assets/icons/instagram.svg',
+      '/assets/icons/twitter.svg'
+    ]
+  }
