@@ -14,6 +14,11 @@ export const headerLinks = [
     {
         label: "Tests",
         route: '/test'
+    },
+
+    {
+      label: 'News',
+      route: '/news'
     }
 ];
 
