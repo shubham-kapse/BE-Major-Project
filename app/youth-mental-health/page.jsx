@@ -9,7 +9,7 @@ import { Separator } from '@/components/ui/separator';
 // import { useNavigate } from 'react-router-dom';
 // import { db } from '../firebase';
 
-const EDTest = () => {
+const YouthTest = () => {
     const [answers, setAnswers] = useState({});
     const [result, setResult] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -31,7 +31,7 @@ const EDTest = () => {
         let score = Object.values(answers).reduce((acc, val) => acc + parseInt(val), 0);
         let depressionLevel = '';
         if (score <= 10) {
-            depressionLevel = 'Based on your Responses, it indicates that you are not having any eating disorder. In this case, you must continue to maintain a healthy diet.';
+            depressionLevel = 'Based on your Responses, it indicates you are at a lower risk. In this case, you must continue practicing healthy coping mechanisms and seek professional support if needed.';
         }
         else if (score <= 20) {
             depressionLevel = 'Based on your Responses, it indicates you are at moderate risk. In this case, you must seek additional support or counseling to address any emerging concerns and learn additional coping strategies.';
@@ -58,19 +58,18 @@ const EDTest = () => {
         <div className="container mx-auto mt-8">
             <section>
                 <motion.div variants={navVariants} initial='hidden' whileInView='show'>
-                    <div className='bg-green-700 p-[30px] rounded-lg'> 
-                        <h1 className="text-white text-center h2-medium">Eating Disorder Test</h1>
-                     </div>
-           
-                     <p className='text-center p-regular-18 py-2 mt-2'> Eating Disorder Test is designed to help individuals assess their relationship with food, body image, and eating behaviors. This self-assessment tool consists of a series of questions that explore various aspects of your eating habits, thoughts, and emotions related to food and weight. By answering honestly, you can gain insights into whether your behaviors and attitudes toward eating may indicate the presence of an eating disorder.</p>
+                    <div className='bg-green-700 p-[30px] rounded-lg'>
+                    <h1 className="text-white h2-medium text-center">Youth Psychological well-being Test</h1>
+                    </div>
+                        <p className='text-center p-regular-18 py-2 mt-2'>The questionnaire that follows can be used to see if you are having emotional, attentional, or behavioral difficulties. <br /> For each item please mark how often you:</p>
                  </motion.div>
             </section>
 
-            <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show' className='mt-2'>
+            <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show'>
             <form onSubmit={handleSubmit} className="bg-gray-100 p-6 rounded-lg shadow-md text-justify">
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">How often do you eat until you feel uncomfortably full?</label>
+                    <label className="text-lg font-semibold mb-2">How often do you feel sad or hopeless?</label>
                     <div>
                         <button
                             type="button"
@@ -92,7 +91,7 @@ const EDTest = () => {
                 </div>
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Have you experienced a loss of interest or pleasure in activities you once enjoyed due to concerns about your eating habits or body image?</label>
+                    <label className="text-lg font-semibold mb-2">Do you have trouble concentrating or paying attention?</label>
                     <div>
                         <button
                             type="button"
@@ -114,50 +113,50 @@ const EDTest = () => {
                 </div>
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">How much more or less do you feel you worry about your weight and body shape than other people your age?</label>
+                    <label className="text-lg font-semibold mb-2">Have you unsuccessfully attempted to cut down or control your substance use in the past year?</label>
                     <div>
                         <button
                             type="button"
                             className={`${styles['option-button']} ${answers['q3'] === '1' ? styles['selected'] : ''}`}
                             onClick={() => handleChange('q3', '1')}
                         >
-                            Less than other people
+                            Not at all
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q3'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q3', '2')}>
-                            About the same as other people
+                            Rarely
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q3'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q3', '3')}>
-                            More than other people
+                            Ocassionally
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q3'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q3', '4')}>
-                            Lot more than other people
+                            Frequently
                         </button>
                     </div>
                 </div>
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Do you find yourself preoccupied with thoughts of food, even when you're not hungry?</label>
+                    <label className="text-lg font-semibold mb-2">How would you rate your stress level?</label>
                     <div>
                         <button
                             type="button"
                             className={`${styles['option-button']} ${answers['q4'] === '1' ? styles['selected'] : ''}`}
                             onClick={() => handleChange('q4', '1')}
                         >
-                            Never
+                            Low
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q4'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q4', '2')}>
-                            Rarely
+                            Moderate
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q4'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q4', '3')}>
-                            Sometimes
+                            High
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q4'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q4', '4')}>
-                            Often
+                            Very High
                         </button>
                     </div>
                 </div>
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Have you experienced a significant increase or decrease in appetite recently?</label>
+                    <label className="text-lg font-semibold mb-2">Have you experienced changes in your sleeping patterns (e.g., trouble falling asleep, waking up frequently)?</label>
                     <div>
                         <button
                             type="button"
@@ -167,18 +166,18 @@ const EDTest = () => {
                             No Changes
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q5'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q5', '2')}>
-                            Slight Changes
+                            Occasionally
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q5'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q5', '3')}>
-                            Moderate Changes
+                            Frequently
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q5'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q5', '4')}>
-                            Significant Changes
+                            Constantly
                         </button>
                     </div>
                 </div>
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Do you feel a sense of loss of control over your eating behaviors, particularly during binge eating episodes?</label>
+                    <label className="text-lg font-semibold mb-2">Do you often feel overwhelmed by your emotions?</label>
                     <div>
                         <button
                             type="button"
@@ -194,7 +193,7 @@ const EDTest = () => {
                             Ocassionally
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q6'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q6', '4')}>
-                            Often
+                            Frequently
                         </button>
                     </div>
                 </div>
@@ -221,66 +220,66 @@ const EDTest = () => {
                 </div>
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Do you feel preoccupied with food, weight, or calories to the extent that it interferes with your daily activities or relationships?</label>
+                    <label className="text-lg font-semibold mb-2">How would you rate your self-esteem?</label>
                     <div>
                         <button
                             type="button"
                             className={`${styles['option-button']} ${answers['q8'] === '1' ? styles['selected'] : ''}`}
                             onClick={() => handleChange('q8', '1')}
                         >
-                            Not at all
+                            Very Low
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q8'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q8', '2')}>
-                            Slightly
+                            Low
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q8'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q8', '3')}>
-                            Moderately
+                            Moderate
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q8'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q8', '4')}>
-                            Extremely
+                            High
                         </button>
                     </div>
                 </div>
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">How would you rate your perception of your body size and shape?</label>
+                    <label className="text-lg font-semibold mb-2">Have you had thoughts of self-harm or suicide?</label>
                     <div>
                         <button
                             type="button"
                             className={`${styles['option-button']} ${answers['q9'] === '1' ? styles['selected'] : ''}`}
                             onClick={() => handleChange('q9', '1')}
                         >
-                            Accurate perception
+                            Not at all
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q9'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q9', '2')}>
-                            Slightly distorted perception
+                            Rarely
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q9'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q9', '3')}>
-                            Moderately distorted perception
+                            Ocassionally
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q9'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q9', '4')}>
-                            Severely distorted perception
+                            Frequently
                         </button>
                     </div>
                 </div>
 
                 <div className="mb-4">
-                    <label className="text-lg font-semibold mb-2">Do you experience physical symptoms such as dizziness, fatigue, or irregular heartbeat due to food restriction or purging behaviors?</label>
+                    <label className="text-lg font-semibold mb-2">How satisfied are you with your social life?</label>
                     <div>
                         <button
                             type="button"
                             className={`${styles['option-button']} ${answers['q10'] === '1' ? styles['selected'] : ''}`}
                             onClick={() => handleChange('q10', '1')}
                         >
-                            Never
+                            Very Satisfied
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q10'] === '2' ? styles['selected'] : ''}`} onClick={() => handleChange('q10', '2')}>
-                            Occasionally
+                            Moderately Satisfied
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q10'] === '3' ? styles['selected'] : ''}`} onClick={() => handleChange('q10', '3')}>
-                            Frequently
+                            Dissatisfied
                         </button>
                         <button type="button" className={`${styles['option-button']} ${answers['q10'] === '4' ? styles['selected'] : ''}`} onClick={() => handleChange('q10', '4')}>
-                            Always
+                            Very Dissatisfied
                         </button>
                     </div>
                 </div>
@@ -289,24 +288,31 @@ const EDTest = () => {
             </form>
             </motion.div>
 
-            <section>
-            <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show' className='mt-5'>
+            <section className='wrapper'>
+                <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show' className='mt-5'>
+                
                 <p className='p-bold-24'>Source:</p>
+                <p className='p-regular-14 mt-5'>Pediatric Symptom Checklist – Youth Self-Report (PSC-Y) </p>
+
+                <p className='p-regular-14 mt-5'>Jellinek, Murphy, et al. (1988). Pediatric Symptom Checklist: Screening school-age children for psychosocial dysfunction. The Journal of Pediatrics, 112(2), pp. 201-209. Retrieved from 
+                    <a href='https://doi.org/10.1016/S0022-3476(88)80056-8' className='text-blue-500'> https://doi.org/10.1016/S0022-3476(88)80056-8</a>
+                </p>
+
                  <p className='p-regular-14 mt-5'>
-                 Graham, A.K., Trockel, M., Weisman, H, Fitzsimmons-Craft, E.E., Balantekin, K.N., Wilfley, D.E., & Taylor, C.B. (2019). A screening tool for detecting eating disorder risk and diagnostic symptoms among college-age women. Journal of American College Health 67(4), pp. 357-366. Retrieved from <a className='text-blue-500' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6320726/'> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6320726/</a>
+                 For more information, visit the Pediatric Symptom Checklist page at Massachusetts General Hospital Psychiatry:<br/> <a href='https://www.massgeneral.org/psychiatry/treatments-and-services/pediatric-symptom-checklist' className='text-blue-500'> https://www.massgeneral.org/psychiatry/treatments-and-services/pediatric-symptom-checklist</a> 
                  </p>
                
                <p className='p-regular-14 mt-5'>
               <span className='font-bold'>Please note:</span> Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.
                </p>
-
-               <Separator className='border border-gray-500 mt-2'/>
-                
-            </motion.div>
-
-           
+               <Separator className='border border-gray-500'/>
+                </motion.div>
             </section>
+            
+           
+
             {/* {result && <div>Result: {result}</div>} */}
+
 
             <Modal
                 isOpen={modalIsOpen}
@@ -324,4 +330,4 @@ const EDTest = () => {
     );
 };
 
-export default EDTest;
+export default YouthTest;

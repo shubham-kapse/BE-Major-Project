@@ -5,6 +5,7 @@ import styles from './Depress3.module.css';
 import Modal from 'react-modal';
 import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '@/utils/motion';
+import { Separator } from '@/components/ui/separator';
 
 const Depress3 = () => {
     const [answers, setAnswers] = useState({});
@@ -260,9 +261,13 @@ const Depress3 = () => {
                 {/* Add more questions like this */}
                 <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-10">Submit</button>
             </form>
+            </motion.div>
 
-            <div className='mt-5'>
+            <section>
+                <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show'>
+
                 <p className='p-bold-24'>Source:</p>
+
                 <p className='p-regular-14 mt-5'>PHQ9 Copyright © Pfizer Inc. All rights reserved. Reproduced with permission. PRIME-MD ® is a trademark of Pfizer Inc.</p>
 
                  <p className='p-regular-14 mt-5'>
@@ -274,9 +279,13 @@ const Depress3 = () => {
               <span className='font-bold'>Please note:</span> Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.
                </p>
 
-                
-            </div>
-            </motion.div>
+               <Separator className='border border-gray-500 mt-2'/>
+
+               </motion.div>
+               
+            </section>
+
+
             {/* {result && <div>Result: {result}</div>} */}
 
             <Modal

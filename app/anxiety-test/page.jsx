@@ -268,23 +268,23 @@ const Anxiety2 = () => {
                 {/* Add more questions like this */}
                 <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-10">Submit</button>
             </form>
-            
-            <div className='mt-5'>
-                <p className='p-bold-24'>Source:</p>
-                <p className='p-regular-14 mt-5'>Primary Care Evaluation of Mental Disorders Patient Health Questionnaire (PRIME-MD-PHQ). The PHQ, including the GAD-7, was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke, and colleagues. For research information, contact Dr. Spitzer at ris8@columbia.edu. PRIME-MD® is a trademark of Pfizer Inc. Copyright© 1999 Pfizer Inc. All rights reserved. Reproduced with permission. </p>
-
-                 <p className='p-regular-14 mt-5'>
-                 Spitzer, Kroenke, et al. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7. Archives of Internal Medicine 166(10), 1092-1097.<br/> Retrieved from  
-                <a href='http://archinte.jamanetwork.com/article.aspx?articleid=410326' className='text-blue-500'> http://archinte.jamanetwork.com/article.aspx?articleid=410326</a>
-                 </p>
-               
-               <p className='p-regular-14 mt-5'>
-              <span className='font-bold'>Please note:</span> Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.
-               </p>
-
-                
-            </div>
             </motion.div>
+
+            <section>
+                <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show' className='mt-5'>
+                <p className='p-bold-24'>Source:</p>
+
+                <p className='p-regular-14 mt-5'>Primary Care Evaluation of Mental Disorders Patient Health Questionnaire (PRIME-MD-PHQ). The PHQ, including the GAD-7, was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke, and colleagues. For research information, contact Dr. Spitzer at ris8@columbia.edu. PRIME-MD® is a trademark of Pfizer Inc. Copyright© 1999 Pfizer Inc. All rights reserved. Reproduced with permission.</p>
+
+                <p className='p-regular-14 mt-5'>Spitzer, Kroenke, et al. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7. Archives of Internal Medicine 166(10), 1092-1097. Retrieved from
+                <a href='http://archinte.jamanetwork.com/article.aspx?articleid=410326' className='text-blue-500'> http://archinte.jamanetwork.com/article.aspx?articleid=410326</a></p>
+
+                <p className='p-regular-14 mt-5'><span className='font-bold'>Please note: </span>Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.</p>
+                <Separator className='border border-gray-500 mt-2'/>
+                </motion.div>
+            </section>
+
+            
             {/* {result && <div>Result: {result}</div>} */}
 
             <Modal

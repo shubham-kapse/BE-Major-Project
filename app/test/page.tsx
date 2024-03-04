@@ -36,9 +36,11 @@ function page() {
         <motion.div variants={navVariants} initial='hidden' whileInView='show' className="flex gap-5">
           <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">ADHD Test</Button>
           <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
-            <Link href='/bipolar-test'>BiPolar Test</Link>
+            <Link href='/bipolar-test'>Bipolar Test</Link>
           </Button>
-          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Psychosis Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+            <Link href='/psychosis-test'>Psychosis Test</Link>
+          </Button>
         </motion.div>
       </section>
 
@@ -57,7 +59,9 @@ function page() {
       <section className="flex-center">
         <motion.div variants={footerVariants} initial='hidden' whileInView='show' className="flex gap-5">
           <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Parent Test - Your Childs Mental Health</Button>
-          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Youth Mental Health Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+            <Link href='/youth-mental-health'>Youth Mental Health Test</Link>
+          </Button>
         </motion.div>
 
       </section>

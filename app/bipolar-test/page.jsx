@@ -5,6 +5,7 @@ import styles from './Depress3.module.css';
 import Modal from 'react-modal';
 import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '@/utils/motion';
+import { Separator } from '@/components/ui/separator';
 // import { useNavigate } from 'react-router-dom';
 // import { db } from '../firebase';
 
@@ -262,21 +263,23 @@ const Bipolar = () => {
                 {/* Add more questions like this */}
                 <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-10">Submit</button>
             </form>
-
-            <div className='mt-5'>
-                <p className='p-bold-24'>Source:</p>
-                 <p className='p-regular-14 mt-5'>
-                 Hirschfeld, et al. (2000) Development and Validation of a Screening Instrument for Bipolar Spectrum Disorder: The Mood Disorder Questionnaire. American Journal of Psychiatry 157(11), pp. 1873-1875. Retrieved from
-                <a href='http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873' className='text-blue-500'> http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873</a>
-                 </p>
-               
-               <p className='p-regular-14 mt-5'>
-              <span className='font-bold'>Please note:</span> Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.
-               </p>
-
-                
-            </div>
             </motion.div>
+
+            <section>
+                <motion.div variants={fadeIn('right','tween',0.2,1)} initial='hidden' whileInView='show'>
+                    <p className='p-bold-24'>Source:</p>
+
+                    <p className='p-regular-14 mt-5'>Hirschfeld, et al. (2000) Development and Validation of a Screening Instrument for Bipolar Spectrum Disorder: The Mood Disorder Questionnaire. American Journal of Psychiatry 157(11), pp. 1873-1875. Retrieved from <br/>
+                    <a href='http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873' className='text-blue-500'> http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873</a>
+                    </p>
+
+                    <p className='p-regular-14 mt-5'><span className='font-bold'>Please note: </span>Online screening tools are not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider.</p>
+
+                    <Separator className='border border-gray-500 mt-2'/>
+                </motion.div>
+            </section>
+
+            
             {/* {result && <div>Result: {result}</div>} */}
 
             <Modal
