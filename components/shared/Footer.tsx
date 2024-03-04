@@ -10,7 +10,7 @@ import { FOOTER_CONTACT_INFO, FOOTER_LINKS, socials } from '@/constants'
 const Footer = () => {
   return (
     <>
-      <section className='mt-16'>
+      <section className='mt-16 '>
         <motion.footer className='flex-center mb-24' variants={footerVariants} initial='hidden' whileInView='show'>
 
           <div className='mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 flex w-full flex-col gap-14'>
@@ -21,7 +21,13 @@ const Footer = () => {
               </Link>
 
               <div className='flex flex-wrap gap-10 sm:justify-between md:flex-1'>
-                {FOOTER_LINKS.map((columns) => (
+                <ul className='flex flex-col gap-4'>
+                  <p className='font-bold'>Services</p>
+                  <Link href='/youtube-page'><p>Youtube</p></Link>
+                  <Link href='/test'><p>Tests</p></Link>
+                  <Link href='/news'><p>News</p></Link>
+                </ul>
+                {/* {FOOTER_LINKS.map((columns) => (
                   <FooterColumn title={columns.title}>
                     <ul className='regular-14 flex flex-col gap-4'>
                         {columns.links.map((link) => (
@@ -29,7 +35,9 @@ const Footer = () => {
                         ))}
                     </ul>
                   </FooterColumn>
-                ))}
+                ))} */}
+
+                
 
                 <div className='flex flex-col gap-5'>
                       <FooterColumn title={FOOTER_CONTACT_INFO.title}>

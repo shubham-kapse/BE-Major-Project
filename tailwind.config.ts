@@ -4,10 +4,10 @@
 module.exports = ({
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,jsx}',
+    './components/**/*.{ts,tsx,jsx}',
+    './app/**/*.{ts,tsx,jsx}',
+    './src/**/*.{ts,tsx,jsx}',
   ],
   theme: {
     container: {
@@ -25,6 +25,22 @@ module.exports = ({
           DEFAULT: '#624CF5',
           foreground: 'hsl(var(--primary-foreground))',
         },
+
+        keyframes: {
+          "accordion-down": {
+            from: { height: "0" },
+            to: { height: "var(--radix-accordion-content-height)" },
+          },
+          "accordion-up": {
+            from: { height: "var(--radix-accordion-content-height)" },
+            to: { height: "0" },
+          },
+        },
+        animation: {
+          "accordion-down": "accordion-down 0.2s ease-out",
+          "accordion-up": "accordion-up 0.2s ease-out",
+        },
+
         coral: {
           500: '#15BF59',
         },
@@ -94,5 +110,5 @@ module.exports = ({
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'),('@tailwindcss/forms')],
 });

@@ -22,11 +22,11 @@ function page() {
       <section className="flex-center">
         <motion.div variants={navVariants} initial='hidden' whileInView='show' className="flex gap-5 py-5">
 
-         <Button size='lg' className="button w-full sm:w-fit"><Link href='/depression-test'>Depression Test</Link></Button>
+         <Button size='lg' className="button w-full sm:w-fit bg-green-600 hover:bg-green-800"><Link href='/depression-test'>Depression Test</Link></Button>
 
-         <Button size='lg' className="button w-full sm:w-fit"><Link href='/postpartum-test'>PostPartum Depression(New and Expecting Parents)</Link></Button>
+         <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800"><Link href='/postpartum-test'>PostPartum Depression(New and Expecting Parents)</Link></Button>
 
-         <Button size='lg' className="button w-full sm:w-fit">Anxiety Test</Button>
+         <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800"><Link href='/anxiety-test'>Anxiety Test</Link></Button>
         </motion.div>
       </section>
 
@@ -34,9 +34,11 @@ function page() {
 
       <section className="flex-center">
         <motion.div variants={navVariants} initial='hidden' whileInView='show' className="flex gap-5">
-          <Button size='lg' className="button w-full sm:w-fit">ADHD Test</Button>
-          <Button size='lg' className="button w-full sm:w-fit">BiPolar Test</Button>
-          <Button size='lg' className="button w-full sm:w-fit">Psychosis Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">ADHD Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+            <Link href='/bipolar-test'>BiPolar Test</Link>
+          </Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Psychosis Test</Button>
         </motion.div>
       </section>
 
@@ -44,16 +46,18 @@ function page() {
       
       <section className="flex-center ">
        <motion.div variants={footerVariants} initial='hidden' whileInView='show' className="flex gap-5 py-5">
-          <Button className="button w-full sm:w-fit" size='lg'>PTSD Test</Button>
-          <Button className="button w-full sm:w-fit" size='lg'>Eating Disorder Test</Button>
-          <Button className="button w-full sm:w-fit" size='lg'>Addiction Test</Button>
+          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg' >PTSD Test</Button>
+          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>
+            <Link href='/eating-disorder-test'>Eating Disorder Test</Link>
+            </Button>
+          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>Addiction Test</Button>
        </motion.div>     
       </section>
 
       <section className="flex-center">
         <motion.div variants={footerVariants} initial='hidden' whileInView='show' className="flex gap-5">
-          <Button size='lg' className="button w-full sm:w-fit">Parent Test - Your Childs Mental Health</Button>
-          <Button size='lg' className="button w-full sm:w-fit">Youth Mental Health Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Parent Test - Your Childs Mental Health</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Youth Mental Health Test</Button>
         </motion.div>
 
       </section>
