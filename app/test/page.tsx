@@ -24,7 +24,11 @@ function page() {
 
          <Button size='lg' className="button w-full sm:w-fit bg-green-600 hover:bg-green-800"><Link href='/depression-test'>Depression Test</Link></Button>
 
-         <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800"><Link href='/postpartum-test'>PostPartum Depression(New and Expecting Parents)</Link></Button>
+         {/* <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800"><Link href='/postpartum-test'>PostPartum Depression(New and Expecting Parents)</Link></Button> */}
+
+         <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+            <Link href='/youth-mental-health'>Youth Mental Health Test</Link>
+          </Button>
 
          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800"><Link href='/anxiety-test'>Anxiety Test</Link></Button>
         </motion.div>
@@ -52,16 +56,18 @@ function page() {
           <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>
             <Link href='/eating-disorder-test'>Eating Disorder Test</Link>
             </Button>
-          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>Addiction Test</Button>
+          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>
+            <Link href='/addiction-test'>Addiction Test</Link>
+          </Button>
        </motion.div>     
       </section>
 
       <section className="flex-center">
         <motion.div variants={footerVariants} initial='hidden' whileInView='show' className="flex gap-5">
-          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Parent Test - Your Childs Mental Health</Button>
-          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+          {/* <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">Parent Test - Your Childs Mental Health</Button> */}
+          {/* <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
             <Link href='/youth-mental-health'>Youth Mental Health Test</Link>
-          </Button>
+          </Button> */}
         </motion.div>
 
       </section>
