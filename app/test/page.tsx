@@ -38,7 +38,9 @@ function page() {
 
       <section className="flex-center">
         <motion.div variants={navVariants} initial='hidden' whileInView='show' className="flex gap-5">
-          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">ADHD Test</Button>
+          <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
+            <Link href='/adhd-test'>ADHD Test</Link>
+          </Button>
           <Button size='lg' className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800">
             <Link href='/bipolar-test'>Bipolar Test</Link>
           </Button>
@@ -52,7 +54,9 @@ function page() {
       
       <section className="flex-center ">
        <motion.div variants={footerVariants} initial='hidden' whileInView='show' className="flex gap-5 py-5">
-          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg' >PTSD Test</Button>
+          <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg' >
+            <Link href='/ptsd-test'>PTSD Test</Link>
+          </Button>
           <Button className="button w-full sm:w-fit  bg-green-600 hover:bg-green-800" size='lg'>
             <Link href='/eating-disorder-test'>Eating Disorder Test</Link>
             </Button>

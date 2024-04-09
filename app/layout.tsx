@@ -39,7 +39,7 @@ export default function RootLayout({
           {children}
           
           <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-          <script src="https://mediafiles.botpress.cloud/f3ec3f79-e020-4ac7-8a0b-a7178e25078d/webchat/config.js" defer></script>
+<script src="https://mediafiles.botpress.cloud/f3ec3f79-e020-4ac7-8a0b-a7178e25078d/webchat/config.js" defer></script>
 
         </body>
 

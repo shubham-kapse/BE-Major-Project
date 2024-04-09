@@ -1,3 +1,4 @@
+import { Label } from "@radix-ui/react-label";
 
 
 export const headerLinks = [
@@ -19,6 +20,16 @@ export const headerLinks = [
     {
       label: 'News',
       route: '/news'
+    },
+
+    {
+      label: 'More Info',
+      route: '/more-info'
+    },
+
+    {
+      label: 'Resources',
+      route: '/resources'
     }
 ];
 
@@ -78,6 +89,13 @@ export const testLinks = [
     route: '/youth-mental-health'
   }
 ];
+
+export const infoLink = [
+  {
+    label: 'ADHD',
+    route: '/adhd-info'
+  }
+]
 
 export const nextLink = [
     {
